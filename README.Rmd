@@ -50,7 +50,9 @@ stat_table(my_model)
 ```
 
 And a histogram of residuals...
-```{r, warning = FALSE}
+```{r, warning = FALSE, message = FALSE}
 plot_residuals(my_model)
 ```
+
+
 Woohoo! Happy Plotting!

@@ -67,9 +67,7 @@ And a histogram of residuals...
 plot_residuals(my_model)
 ```
 
-```
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-```
-
 ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
+
+
 Woohoo! Happy Plotting!
