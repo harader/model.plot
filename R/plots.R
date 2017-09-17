@@ -165,14 +165,30 @@ arrow_plot <- function(m, p = .05) {
 
 }
 
-#' Residual plot
+#' Plot a histogram of residuals
+#'
+#' @param m A \code{lm} object
+#' @export
+plot_residuals <- function(m, outlier = FALSE) {
+
+  ggplot(data = data.frame(m$residuals),
+         ggplot2::aes(x = m.residuals)) +
+    ggplot2::geom_histogram() +
+    ggplot2::labs(title = "Distribution of Residuals",
+                  subtitle = "Actual Value - Fitted Values",
+                  x = NULL) +
+    ggplot2::geom_vline(color = "white", xintercept = 0)
+
+}
+
+#' Residual dots
 #'
 #' Plot actual vs fitted values, with orange lines to represent residuals.
 #' Warning: this plot will look funky if you have a binary dependent variable!
 #'
 #' @param m A \code{lm} object
 #' @export
-residual_plot <- function(m) {
+residual_dots <- function(m) {
 
   m$model %>%
     dplyr::mutate(fitted_values = m$fitted.values,

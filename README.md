@@ -61,4 +61,13 @@ stat_table(my_model)
 
 ![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
 
+And a histogram of residuals...
+
+```r
+plot_residuals(my_model)
+```
+
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
+
+
 Woohoo! Happy Plotting!
